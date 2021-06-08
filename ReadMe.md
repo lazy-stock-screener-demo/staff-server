@@ -10,6 +10,19 @@ It is a node.js server based on the idea of clean architecture and DDD best prac
 
 The full product is still under constructing and the full product is committed to gitlab. I only share part of the use-case in order to demonstrate how I built up the staff-server.
 
+### Overview
+
+- Everything is use-case, no matter it is worker, event handler or normal api handler.
+- Workers are executed immediately when server start, e.g. building ternary tree for auto-complete searching feature.
+
+- Clean architecture
+
+  - References
+    [Clean Architecture and Modular pattern](https://en.bbo.com.ph/tech/clean-architecture-and-modular-pattern/)
+    ![Clean Architecture](https://drive.google.com/uc?export=view&id=1P0Zl80q2_FLIRAE2KU5GxDRz848syNMu)
+
+- Controller layer define various of adapters firing use-case, e.g. api controller, graphql controller or worker controller.
+
 ### File Structure
 
 - application
